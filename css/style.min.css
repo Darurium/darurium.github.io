@@ -871,17 +871,42 @@ footer a:hover {
   .requier {
     padding: 28px 0 30px 0;
   }
+  .footer_divider {
+    width: 250px;
+  }
   .footer_block {
     width: 380px;
+    margin: 0 auto;
+  }
+  .footer_links_main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footer_links_main a {
-    font-size: 14px;
+    font-size: 12px;
+    padding: 0 10px;
   }
   .footer_links_sub {
-    margin-top: 20px;
+    width: 290px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
   }
   .footer_links_sub a {
-    font-size: 11px;
+    font-size: 10px;
+    padding: 0 5px;
+    line-height: 30px;
+  }
+  .footer_mobile {
+    margin-left: 5px;
   }
 }
 /*# sourceMappingURL=style.min.css.map */
