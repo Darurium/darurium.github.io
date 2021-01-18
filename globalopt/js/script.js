@@ -16,3 +16,13 @@ links.forEach(link => {
         menu.classList.remove('menu__active');
     });
 });
+
+
+
+
+$(document).ready(function(){
+    $(".reviews__slider").slick({
+        
+        
+    });
+});
