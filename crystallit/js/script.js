@@ -69,10 +69,19 @@ const modal = document.querySelector('.modal'),
 
 modalBtn.addEventListener('click', () => {
     overlay.classList.add('overlay__active');
+    document.body.style.overflow = 'hidden';
 });
 
 closeBtn.addEventListener('click', () => {
     overlay.classList.remove('overlay__active');
+    document.body.style.overflow = '';
+});
+
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) {
+    overlay.classList.remove('overlay__active');
+    document.body.style.overflow = '';
+  }
 });
 
 // Hamburger - menu
