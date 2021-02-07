@@ -2,20 +2,37 @@ $(function() {
     $('.slider').slick({
         infinite: true,
         slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [{
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            
+        ]
+
     });
     
-    $('.choise__slider').slick({
-        infinite: true,
-        arrows: true,
-        slidesToShow: 3,
-        slidesToScroll: 1
-    });
+    // $('.choise__slider').slick({
+    //     infinite: true,
+    //     arrows: true,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1
+    // });
 
-    $('.reviews__slider').slick({
-        dots: true,
-        arrows: false
-    });
+    // $('.reviews__slider').slick({
+    //     dots: true,
+    //     arrows: false
+    // });
 
     
 });
@@ -36,13 +53,23 @@ closeBtn.addEventListener('click', () => {
     overlay.classList.remove('overlay__active');
 });
 
-// Flip
+// Hamburger - menu
 
-// const overlayCard = document.querySelector('.detail__overlay'),
-//       photoBack = document.querySelectorAll('.flip-card-back');
+const humburger = document.querySelector('.hamburger'),
+      closeBtnMenu = document.querySelector('.menu__close'),
+      menu = document.querySelector('.menu'),
+      links = document.querySelectorAll('.menu__link');
 
-// photoBack.forEach((item, i) => {
-//     item.addEventListener('mouseover', () => {
-//         overlayCard.style.display = 'block';
-//     });
-// });
+humburger.addEventListener('click', () => {
+    menu.classList.add('menu__active');
+});
+
+closeBtnMenu.addEventListener('click', () => {
+    menu.classList.remove('menu__active');
+});
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('menu__active');
+    });
+});
