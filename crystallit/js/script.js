@@ -3,6 +3,8 @@ $(function() {
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [{
               breakpoint: 992,
               settings: {
@@ -22,17 +24,37 @@ $(function() {
 
     });
     
-    // $('.choise__slider').slick({
-    //     infinite: true,
-    //     arrows: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1
-    // });
+    $('.choise__slider').slick({
+        infinite: true,
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [{
+            breakpoint: 1100,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                dots: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          }
+          
+      ]
+    });
 
-    // $('.reviews__slider').slick({
-    //     dots: true,
-    //     arrows: false
-    // });
+    $('.reviews__slider').slick({
+        dots: true,
+        arrows: false
+    });
 
     
 });
