@@ -60,6 +60,7 @@ $(function() {
 });
 
 
+
 // Modal
 
 const modal = document.querySelector('.modal'),
